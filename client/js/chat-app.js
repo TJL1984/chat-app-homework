@@ -9,26 +9,26 @@
 
         $.ajax({
             url: '/login',
-            data:'JSON.stringify'({
+            data: JSON.stringify({
                     userName: $('.userName').val()
             }),
             headers: {
-                    'Content-Type': 'application/JSON',
+                    'Content-Type': 'application/json',
             }
         })
 
 
-        $.login
+        $('.login')
                 .on('submit', function userName(event){
-
-        })
-
-        .done(function successHandler(data){
-                console.log('it works!', data);
-        })
-        .fail(function failHandler(xhr){
-                console.log('no soup', xhr);
-        })
+                        console.log("Clicked Submit", event);
+                        event.preventDefault();
+                })
+                // .done(function successHandler(data){
+                //         console.log('it works!', data);
+                // })
+                // .fail(function failHandler(xhr){
+                //         console.log('no soup', xhr);
+                // })
 
 
 
